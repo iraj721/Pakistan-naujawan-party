@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css" />
+<base target="_blank">
 </head>
 <body>
 
@@ -18,18 +19,20 @@
     <a href="#" class="brand">
       <img src="logo.jpeg" alt="PNP logo" class="brand-logo" />
       <div class="brand-text">
-        <div class="brand-line1">PAKISTAN</div>
-        <div class="brand-line2">NAUJAWAN PARTY</div>
-        <div class="brand-tag">ONE YOUTH <span>●</span> ONE NATION <span>●</span> ONE MISSION</div>
+        <div class="brand-line1"></div>
+        <div class="brand-line2"></div>
+        <div class="brand-tag"> <span></span>  <span></span></div>
       </div>
     </a>
 
     <nav class="nav-desktop">
-      <a href="#">Manifesto</a>
-      <a href="#">Rozgar</a>
+      <a href="#" class="manifesto-trigger">Manifesto</a>
+      <a href="#">Membership</a>
+      <a href="#">Rah e Taraqi</a>
       <a href="#">Naujawan TV</a>
       <a href="#">Masail</a>
       <a href="#">Madadgar</a>
+      <a href="#">Political Game</a>
     </nav>
 
     <div class="header-right">
@@ -54,27 +57,29 @@
     </button>
   </div>
   <nav class="drawer-nav">
-    <a href="#">Manifesto</a>
+    <a href="#" class="manifesto-trigger">Manifesto</a>
+    <a href="#">Membership</a>
     <a href="#">Rozgar</a>
     <a href="#">Naujawan TV</a>
     <a href="#">Masail</a>
     <a href="#">Madadgar</a>
+    <a href="#">Political Game</a>
     <a href="https://forms.gle/ExuChNumyBGTj1Z96" target="_blank" class="btn btn-primary btn-pill drawer-join">JOIN US</a>
   </nav>
 </aside>
 
-<!-- HERO -->
+<!-- HERO — Text on LEFT, Image fully on RIGHT -->
 <section class="hero">
   <div class="hero-bg">
-    <img src="hero-bg.jpg" alt="" />
+    <img src="hero-bg.jpeg" alt="" />
     <div class="hero-overlay"></div>
   </div>
   <div class="container hero-inner">
     <h1 class="hero-title">
-      JAAG RAHA HAI<br />
-      <span>NAUJAWAN</span>
+      PAKISTAN<br />
+      <span>NAUJAWAN PARTY</span>
     </h1>
-    <p class="hero-sub">A movement for<br />a better Pakistan</p>
+    <p class="hero-sub">A political movement by youth and GenZ of Pakistan for stronger, united and progressive Pakistan</p>
     <div class="hero-actions">
       <a href="https://forms.gle/ExuChNumyBGTj1Z96" target="_blank" class="btn btn-primary">JOIN THE MOVEMENT
         <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
@@ -93,7 +98,7 @@
     <div class="mission-card">
       <div class="mission-text">
         <div class="eyebrow"><span class="bar"></span><span>Our Mission</span></div>
-        <h2>A Movement for<br /><span class="accent">a Better Pakistan</span></h2>
+        <h2>JAG RAHA<br /><span class="accent">HAI NAUJAWAN</span></h2>
         <p>The nation's youth, especially students, should devote themselves to education and character-building, as they are the future leaders of Pakistan.</p>
         <p class="quote">"Quaid e Azam Muhammad Ali Jinnah"</p>
         <a href="#" class="btn btn-ghost-primary">READ MORE
@@ -101,13 +106,13 @@
         </a>
       </div>
       <div class="mission-media">
-        <video src="side-video.mp4"  controls preload="metadata" playsinline></video>
+        <video src="side-video.mp4" controls preload="metadata" playsinline></video>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CORE VALUES -->
+<!-- CORE VALUES — 5 cards + Explore More -->
 <section class="values">
   <div class="container">
     <div class="section-heading">
@@ -136,9 +141,10 @@
         <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="m19 8 3 8a5 5 0 0 1-6 0z"/><path d="M3 7h1a17 17 0 0 0 8-2 17 17 0 0 0 8 2h1"/><path d="m5 8 3 8a5 5 0 0 1-6 0z"/><path d="M7 21h10"/></svg>
         <div>RULE OF LAW &amp;<br/>JUSTICE SYSTEM</div>
       </div>
-      <div class="value-card">
-        <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
-        <div>NATIONAL SECURITY &amp;<br/>DEFENSE STRENGTH</div>
+      <!-- Explore More replaces National Security card -->
+      <div class="value-card explore-card" id="exploreMoreCard">
+        <svg class="value-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+        <div>EXPLORE<br/>MORE</div>
       </div>
     </div>
   </div>
@@ -150,7 +156,7 @@
     <div class="stats-card">
       <div class="stat">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><path d="M16 3.128a4 4 0 0 1 0 7.744"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><circle cx="9" cy="7" r="4"/></svg>
-        <div class="num">1M+</div><div class="lbl">Youth Engaged</div>
+        <div class="num">40k+</div><div class="lbl">Youth Engaged</div>
       </div>
       <div class="stat">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></svg>
@@ -160,13 +166,110 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
         <div class="num">250+</div><div class="lbl">Events</div>
       </div>
-      <div class="stat">
+      <div class="stat stat-clickable" id="citiesStat">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>
-        <div class="num">50+</div><div class="lbl">Cities</div>
+        <div class="num">10</div><div class="lbl">Regions</div>
       </div>
       <div class="stat">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></svg>
-        <div class="num">1000+</div><div class="lbl">Volunteers</div>
+        <div class="num">2000+</div><div class="lbl">Volunteers</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REGIONS POPUP -->
+<div id="regionsPopup" class="regions-popup">
+  <div class="regions-popup-overlay"></div>
+  <div class="regions-popup-content">
+    <button class="regions-popup-close" id="regionsPopupClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <h3>Our 10 Regions</h3>
+    <p class="regions-subtitle">One United Movement • One Strong Pakistan</p>
+    <ul class="regions-list">
+      <li><span class="region-num">1</span> North KPK</li>
+      <li><span class="region-num">2</span> South KPK</li>
+      <li><span class="region-num">3</span> Twin Cities</li>
+      <li><span class="region-num">4</span> Northern Punjab</li>
+      <li><span class="region-num">5</span> Southern Punjab</li>
+      <li><span class="region-num">6</span> Kashmir</li>
+      <li><span class="region-num">7</span> Balochistan</li>
+      <li><span class="region-num">8</span> Gilgit Baltistan</li>
+      <li><span class="region-num">9</span> Sindh</li>
+      <li><span class="region-num">10</span> Karachi Sindh</li>
+    </ul>
+  </div>
+</div>
+
+<!-- MANIFESTO GOALS POPUP -->
+<div id="manifestoPopup" class="manifesto-popup">
+  <div class="manifesto-popup-overlay"></div>
+  <div class="manifesto-popup-content">
+    <button class="manifesto-popup-close" id="manifestoPopupClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="manifesto-header">
+      <img src="logo.jpeg" alt="PNP Logo" class="manifesto-logo"/>
+      <h2>TEHREEK-E-NAUJAWAN PAKISTAN</h2>
+      <p class="manifesto-subtitle">25 Goals for a Stronger, Prosperous Pakistan</p>
+    </div>
+    <div class="manifesto-goals-grid">
+      <div class="goal-card"><span class="goal-num">01</span><span class="goal-text">Youth Empowerment &amp; Leadership</span></div>
+      <div class="goal-card"><span class="goal-num">02</span><span class="goal-text">Political Stability &amp; Social Activism</span></div>
+      <div class="goal-card"><span class="goal-num">03</span><span class="goal-text">End of Colonial Mindset, Social Harmony &amp; National Unity</span></div>
+      <div class="goal-card"><span class="goal-num">04</span><span class="goal-text">Education Reforms and Standard Education System</span></div>
+      <div class="goal-card"><span class="goal-num">05</span><span class="goal-text">Health Reforms and Standard Healthcare for Every Pakistani</span></div>
+      <div class="goal-card"><span class="goal-num">06</span><span class="goal-text">Right Person for the Right Position</span></div>
+      <div class="goal-card"><span class="goal-num">07</span><span class="goal-text">Strong Geopolitics, Foreign Policy &amp; Alliances</span></div>
+      <div class="goal-card"><span class="goal-num">08</span><span class="goal-text">Women Empowerment &amp; Safety Reforms</span></div>
+      <div class="goal-card"><span class="goal-num">09</span><span class="goal-text">Rule of Law &amp; Justice System</span></div>
+      <div class="goal-card"><span class="goal-num">10</span><span class="goal-text">National Security &amp; Defense Strength</span></div>
+      <div class="goal-card"><span class="goal-num">11</span><span class="goal-text">Sustainable Energy for a Sustainable Future</span></div>
+      <div class="goal-card"><span class="goal-num">12</span><span class="goal-text">Green Pakistan &amp; Environmental Protection</span></div>
+      <div class="goal-card"><span class="goal-num">13</span><span class="goal-text">Population Control &amp; Family Planning</span></div>
+      <div class="goal-card"><span class="goal-num">14</span><span class="goal-text">Corruption-Free Pakistan</span></div>
+      <div class="goal-card"><span class="goal-num">15</span><span class="goal-text">Industrial &amp; Agricultural Revamp</span></div>
+      <div class="goal-card"><span class="goal-num">16</span><span class="goal-text">Promote Culture, Festivals &amp; Moral Reforms</span></div>
+      <div class="goal-card"><span class="goal-num">17</span><span class="goal-text">Media Upgradation &amp; Information Integrity</span></div>
+      <div class="goal-card"><span class="goal-num">18</span><span class="goal-text">Transportation &amp; Infrastructure Development</span></div>
+      <div class="goal-card"><span class="goal-num">19</span><span class="goal-text">Transparent Public Assets &amp; Tax System</span></div>
+      <div class="goal-card"><span class="goal-num">20</span><span class="goal-text">Blockchain-Based Voting &amp; Transparency</span></div>
+      <div class="goal-card"><span class="goal-num">21</span><span class="goal-text">Meritocracy, Citizenship Awards &amp; Recognition</span></div>
+      <div class="goal-card"><span class="goal-num">22</span><span class="goal-text">Islamic Teachings &amp; Mental Health Awareness</span></div>
+      <div class="goal-card"><span class="goal-num">23</span><span class="goal-text">Digital Pakistan &amp; Nationwide Internet Access</span></div>
+      <div class="goal-card"><span class="goal-num">24</span><span class="goal-text">Senior Citizen Support &amp; End of Child Labor</span></div>
+      <div class="goal-card"><span class="goal-num">25</span><span class="goal-text">Economic Growth &amp; Employment Opportunities</span></div>
+    </div>
+  </div>
+</div>
+
+
+<!-- IMAGE SLIDER -->
+<section class="image-slider">
+  <div class="container">
+    <div class="slider-card">
+      <div class="slider-wrapper">
+        <div class="slider-track" id="sliderTrack">
+          <div class="slider-slide active"><img src="slider1.jpeg" alt="Together for a Better Pakistan" loading="lazy" class="slider-img-zoomout"/></div>
+          <div class="slider-slide"><img src="slider2.jpeg" alt="Jaag Raha Hai Naujawan" loading="lazy" class="slider-img-zoomout"/></div>
+          <div class="slider-slide"><img src="slider3.jpeg" alt="Become a Member" loading="lazy" class="slider-img-zoomout"/></div>
+          <div class="slider-slide"><img src="slider4.jpeg" alt="Together We Can Build a Better Pakistan" loading="lazy" class="slider-img-zoomout"/></div>
+          <div class="slider-slide"><img src="slider5.jpeg" alt="Youth Leadership" loading="lazy" class="slider-img-zoomout"/></div>
+        </div>
+        <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="slider-btn slider-next" id="sliderNext" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+        <div class="slider-dots" id="sliderDots">
+          <span class="slider-dot active" data-index="0"></span>
+          <span class="slider-dot" data-index="1"></span>
+          <span class="slider-dot" data-index="2"></span>
+          <span class="slider-dot" data-index="3"></span>
+          <span class="slider-dot" data-index="4"></span>
+        </div>
       </div>
     </div>
   </div>
@@ -187,16 +290,16 @@
         <div class="body"><h3>Youth Convention in Lahore</h3><p>May 20, 2025</p></div>
       </article>
       <article class="update-card">
-        <div class="thumb"><img src="https://naujawan-join-pakistan.lovable.app/assets/news-tree-BOUm4fRs.jpg" alt="Tree Plantation Drive" loading="lazy"/></div>
-        <div class="body"><h3>Tree Plantation Drive</h3><p>May 15, 2025</p></div>
+        <div class="thumb"><img src="https://naujawan-join-pakistan.lovable.app/assets/news-tree-BOUm4fRs.jpg" alt="Clean and Green Pakistan Drive" loading="lazy"/></div>
+        <div class="body"><h3>Clean &amp; Green Pakistan Drive Seminar</h3><p>August 14, 2026</p></div>
       </article>
       <article class="update-card">
         <div class="thumb"><img src="https://naujawan-join-pakistan.lovable.app/assets/news-seminar-C_D1sMWy.jpg" alt="Education Reform Seminar in Islamabad" loading="lazy"/></div>
         <div class="body"><h3>Education Reform Seminar in Islamabad</h3><p>May 10, 2025</p></div>
       </article>
       <article class="update-card">
-        <div class="thumb"><img src="https://naujawan-join-pakistan.lovable.app/assets/news-clean-D4xWUR5N.jpg" alt="Clean Pakistan Initiative" loading="lazy"/></div>
-        <div class="body"><h3>Clean Pakistan Initiative</h3><p>May 05, 2025</p></div>
+        <div class="thumb"><img src="https://naujawan-join-pakistan.lovable.app/assets/news-clean-D4xWUR5N.jpg" alt="Meeting in Twin Cities" loading="lazy"/></div>
+        <div class="body"><h3>Meeting in Twin Cities of Pakistan</h3><p>June 7, 2026, Sunday</p></div>
       </article>
     </div>
     <div class="dots">
@@ -210,11 +313,11 @@
   <div class="container">
     <div class="cta-card">
       <div class="cta-bg">
-        <img src="hero-bg.jpg" alt="" />
+        <img src="hero-bg.jpeg" alt="" />
         <div class="cta-overlay"></div>
       </div>
       <div class="cta-inner">
-        <h2>BE A PART OF<br/>THE <span>CHANGE</span></h2>
+        <h2>BE THE ONE,<br/>BE THE <span>CHANGE</span></h2>
         <p>Join millions of young Pakistanis who are rising for a better, stronger and prosperous Pakistan.</p>
         <a href="https://forms.gle/ExuChNumyBGTj1Z96" target="_blank" class="btn btn-primary">JOIN US TODAY
           <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
