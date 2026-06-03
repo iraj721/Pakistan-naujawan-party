@@ -204,3 +204,93 @@ document.addEventListener('keydown', (e) => {
   // Start auto-slide immediately
   startAutoSlide();
 })();
+
+// ===== URDU SLIDER - Mobile Only =====
+(function() {
+  var urduTrack = document.getElementById('urduSliderTrack');
+  var urduSlides = document.querySelectorAll('.urdu-slider-slide');
+  var urduDots = document.querySelectorAll('.urdu-slider-dot');
+  var urduPrev = document.getElementById('urduSliderPrev');
+  var urduNext = document.getElementById('urduSliderNext');
+
+  if (!urduTrack || urduSlides.length === 0) return;
+  if (window.innerWidth > 640) return;
+
+  var currentUrduSlide = 0;
+  var totalUrduSlides = urduSlides.length;
+  var urduAutoInterval = null;
+
+  function goToUrduSlide(index) {
+    if (index < 0) index = totalUrduSlides - 1;
+    if (index >= totalUrduSlides) index = 0;
+    currentUrduSlide = index;
+
+    urduTrack.style.transform = 'translateX(-' + (currentUrduSlide * 100) + '%)';
+
+    urduSlides.forEach(function(slide, i) {
+      slide.classList.toggle('active', i === currentUrduSlide);
+    });
+
+    urduDots.forEach(function(dot, i) {
+      dot.classList.toggle('active', i === currentUrduSlide);
+    });
+  }
+
+  function nextUrduSlide() { goToUrduSlide(currentUrduSlide + 1); }
+  function prevUrduSlide() { goToUrduSlide(currentUrduSlide - 1); }
+
+  function startUrduAuto() {
+    if (urduAutoInterval) clearInterval(urduAutoInterval);
+    urduAutoInterval = setInterval(nextUrduSlide, 4000);
+  }
+
+  function stopUrduAuto() {
+    if (urduAutoInterval) {
+      clearInterval(urduAutoInterval);
+      urduAutoInterval = null;
+    }
+  }
+
+  if (urduNext) {
+    urduNext.addEventListener('click', function() {
+      stopUrduAuto();
+      nextUrduSlide();
+      startUrduAuto();
+    });
+  }
+
+  if (urduPrev) {
+    urduPrev.addEventListener('click', function() {
+      stopUrduAuto();
+      prevUrduSlide();
+      startUrduAuto();
+    });
+  }
+
+  urduDots.forEach(function(dot, i) {
+    dot.addEventListener('click', function() {
+      stopUrduAuto();
+      goToUrduSlide(i);
+      startUrduAuto();
+    });
+  });
+
+  var urduTouchStart = 0;
+
+  urduTrack.addEventListener('touchstart', function(e) {
+    urduTouchStart = e.changedTouches[0].screenX;
+    stopUrduAuto();
+  }, {passive: true});
+
+  urduTrack.addEventListener('touchend', function(e) {
+    var touchEnd = e.changedTouches[0].screenX;
+    var diff = urduTouchStart - touchEnd;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) nextUrduSlide();
+      else prevUrduSlide();
+    }
+    startUrduAuto();
+  }, {passive: true});
+
+  startUrduAuto();
+})();
